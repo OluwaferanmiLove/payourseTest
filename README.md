@@ -1,6 +1,5 @@
 # payourseTest
-<img src="./src/assets/image/screenShot1.png" width="50%" height="50%">
-<img src="./src/assets/image/screenShot2.png" width="50%" height="50%">
+<img src="./src/assets/image/screenShot1.png" width="30%" height="30%"><img src="./src/assets/image/screenShot2.png" width="30%" height="30%">
 ## Possible issue
 
   Ruby version mismatch error
