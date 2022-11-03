@@ -3,6 +3,7 @@
 ## Possible issue
 
   Ruby version mismatch error
+  
     Download Ruby version manage to manage diferent version of Ruby
     rbenv - most recomended
 
