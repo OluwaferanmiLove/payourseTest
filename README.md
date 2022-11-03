@@ -1,6 +1,7 @@
 # payourseTest
-![OutPut](./src/assets/image/screenShot1.png | width=100)
-![OutPut](./src/assets/image/screenShot2.png  | width=100)
+![OutPut](./src/assets/image/screenShot1.png)
+![OutPut](./src/assets/image/screenShot2.png)
+<img src="./src/assets/image/screenShot2.png" width="50%" height="50%">
 ## Possible issue
 
   Ruby version mismatch error
