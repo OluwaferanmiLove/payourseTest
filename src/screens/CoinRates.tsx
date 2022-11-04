@@ -93,6 +93,7 @@ const CoinRates = () => {
           showSearchBtn={false}
           titleContainerStyle={{alignSelf: 'flex-end', marginLeft: wp(16)}}
           showBackBtn
+          backBtnTestID={'back-btn'}
         />
         <Container marginTop={hp(24)} customStyles={{flex: 1}}>
           <View style={styles.coinInfoContainer}>

@@ -1,5 +1,11 @@
 import React from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+  GestureResponderEvent,
+} from 'react-native';
 import {colors} from '../theme/colors';
 import {hp, wp} from '../utils/responsive-dimension';
 import Input from './Input';
@@ -7,9 +13,18 @@ import Input from './Input';
 interface SearchInputT {
   onPressClose: (event: GestureResponderEvent) => void;
   handleSearch?: (text: string) => void;
+  searchInputTestID?: string;
+  inputTestID?: string;
+  closeBtnTestID?: string;
 }
 
-const SearchInput: React.FC<SearchInputT> = ({handleSearch, onPressClose}) => {
+const SearchInput: React.FC<SearchInputT> = ({
+  handleSearch,
+  onPressClose,
+  searchInputTestID,
+  inputTestID,
+  closeBtnTestID,
+}) => {
   const styles = StyleSheet.create({
     main: {
       flexDirection: 'row',
@@ -27,11 +42,15 @@ const SearchInput: React.FC<SearchInputT> = ({handleSearch, onPressClose}) => {
   });
 
   return (
-    <View style={styles.main}>
+    <View style={styles.main} testID={searchInputTestID}>
       <View style={styles.inputContainer}>
-        <Input placeholder={'Search'} onChangeText={handleSearch} />
+        <Input
+          placeholder={'Search'}
+          onChangeText={handleSearch}
+          testID={inputTestID}
+        />
       </View>
-      <TouchableOpacity onPress={onPressClose}>
+      <TouchableOpacity onPress={onPressClose} testID={closeBtnTestID}>
         <Text>Close</Text>
       </TouchableOpacity>
     </View>

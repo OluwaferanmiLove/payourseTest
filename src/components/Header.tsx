@@ -21,6 +21,9 @@ interface HeaderT {
   showBackBtn?: boolean;
   titleContainerStyle?: StyleProp<ViewStyle>;
   onPressSearch?: (event: GestureResponderEvent) => void;
+  searchBtnTestID?: string;
+  headerTestID?: string;
+  backBtnTestID?: string;
 }
 
 const Header: React.FC<HeaderT> = ({
@@ -30,6 +33,9 @@ const Header: React.FC<HeaderT> = ({
   showSearchBtn = true,
   showBackBtn = false,
   onPressSearch,
+  searchBtnTestID,
+  headerTestID,
+  backBtnTestID,
 }) => {
   const styles = StyleSheet.create({
     main: {
@@ -62,9 +68,11 @@ const Header: React.FC<HeaderT> = ({
   const navigation = useNavigation();
 
   return (
-    <View style={styles.main}>
+    <View style={styles.main} testID={headerTestID}>
       {showBackBtn && (
-        <TouchableOpacity onPress={() => navigation.goBack()}>
+        <TouchableOpacity
+          onPress={() => navigation.goBack()}
+          testID={backBtnTestID}>
           <ArrowBack />
         </TouchableOpacity>
       )}
@@ -73,7 +81,7 @@ const Header: React.FC<HeaderT> = ({
         <Text style={styles.title}>{title}</Text>
       </View>
       {showSearchBtn && (
-        <TouchableOpacity onPress={onPressSearch}>
+        <TouchableOpacity onPress={onPressSearch} testID={searchBtnTestID}>
           <SearchIcon />
         </TouchableOpacity>
       )}

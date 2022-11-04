@@ -76,11 +76,16 @@ const Coins = () => {
       <LoadingContainer loading={getCoinsLoading}>
         {showSearch ? (
           <SearchInput
+            inputTestID={'input'}
+            searchInputTestID={'search-input'}
+            closeBtnTestID={'close-input-btn'}
             handleSearch={handleSearch}
             onPressClose={handleShowSearch}
           />
         ) : (
           <Header
+            headerTestID={'header'}
+            searchBtnTestID={'header-search-btn'}
             subTitle={'Payourse'}
             title={'Coinprofile'}
             onPressSearch={handleShowSearch}

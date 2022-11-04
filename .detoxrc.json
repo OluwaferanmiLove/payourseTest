@@ -5,8 +5,8 @@
   "apps": {
     "ios": {
       "type": "ios.app",
-      "binaryPath": "./ios/build/Build/Products/Release-iphonesimulator/payourseTest.app",
-      "build": "xcodebuild -workspace ios/payourseTest.xcworkspace -configuration Release -scheme payourseTest -destination id=A24746E3-62D4-4B4C-96D7-301D167E2E53"
+      "binaryPath": "./ios/build/Build/Products/Debug-iphonesimulator/payourseTest.app",
+      "build": "xcodebuild -workspace ios/payourseTest.xcworkspace -configuration Debug -scheme payourseTest -destination id=A24746E3-62D4-4B4C-96D7-301D167E2E53"
     },
     "android": {
       "type": "android.apk",
