@@ -72,7 +72,7 @@ const Coins = () => {
   };
 
   return (
-    <SafeAreaView style={styles.main}>
+    <SafeAreaView style={styles.main} testID={'coins-screen'}>
       <LoadingContainer loading={getCoinsLoading}>
         {showSearch ? (
           <SearchInput
@@ -92,6 +92,7 @@ const Coins = () => {
             style={styles.coinList}
             renderItem={({item}) => (
               <CoinCard
+                testID={item}
                 image={coinInfo[item as keyof typeof coinInfo]?.logo}
                 coinName={coinInfo[item as keyof typeof coinInfo]?.name}
                 coinCode={item}

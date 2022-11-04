@@ -6,13 +6,14 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
+  TouchableOpacityProps,
   View,
   ViewStyle,
 } from 'react-native';
 import {colors} from '../theme/colors';
 import {wp, hp} from '../utils/responsive-dimension';
 
-interface CoinCardT {
+interface CoinCardT extends TouchableOpacityProps {
   marginHorizontal?: number;
   marginVertical?: number;
   marginTop?: number;

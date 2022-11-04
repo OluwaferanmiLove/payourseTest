@@ -85,7 +85,7 @@ const CoinRates = () => {
   };
 
   return (
-    <SafeAreaView style={styles.main}>
+    <SafeAreaView style={styles.main} testID={'coin-rate-screen'}>
       <LoadingContainer loading={loading}>
         <Header
           subTitle={coin}
